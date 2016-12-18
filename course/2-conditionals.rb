@@ -1,6 +1,7 @@
 # coding: utf-8
 
 * Ruby
+
 #
 # $ ruby -v
 # $ ruby -I.
@@ -36,12 +37,3 @@ when Integer
 else
   puts "Sorry, I didn't get it"
 end
-
-* Iterace
-
-# vypise cisla od 1 do 5
-5.times do |i|
-  puts i
-end
-
-8.downto(3) {  puts i }

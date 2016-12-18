@@ -1,38 +1,4 @@
 # coding: utf-8
-
-** Metody - definice
-
-# vsechny vyrazy v Ruby maji navratovou hodnotu!
-def a
-  puts 'Hello!'
-end
-
-# parameter s defaultni hodnotou
-def b(a = nil)
-  puts a
-end
-
-# s blokem implicitne
-def b(array)
-  yield
-end
-
-# s blokem explicitne
-
-
-
-
-
-** Iterace
-
-[ 1, 3, 5 ].each do |i|
-  puts i * 2
-end
-
-while true
-end
-
-
 ** Výjimky
 *** Vyvolani
 
