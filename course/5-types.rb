@@ -45,13 +45,18 @@ a.map(&:upcase)
 { Date.today => "Adam", Date.new(2016,6,20) => 'Jan' }
 
 
-# Idiomy
-#---------------------------------------
-# https://www.sitepoint.com/ruby-golf/
-
-a ||= (2**20).times.map { |x| x**3 / Math::sin(x) }
-
-# ActiveSupport
-
-1.day.
 *** Třídy
+
+class Dog
+  def initialize(name)
+    @name = name
+  end
+  
+  def bark!
+  end
+
+  def name
+    @name
+  end
+end
+

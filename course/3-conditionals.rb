@@ -21,6 +21,11 @@ end
 
 puts "Hello #{name}!" unless name.nil?
 
+** Priklad
+# Nactete 2 cisla, operand (+,-,*,/) a vysledek vypiste.
+# Napriklad 3,8,+ => 11
+# Slo by to snaze? Metody String#split, Object#to_i
+# A co bez podmineneho prikazu?
 
 * CASE
 
@@ -29,7 +34,7 @@ puts "Hello #{name}!" unless name.nil?
 # Integer  === 1
 # => true
 
-case a
+case input
 when /dog/
   puts "I like dogs too, tell me more about them."
 when Integer
@@ -37,3 +42,4 @@ when Integer
 else
   puts "Sorry, I didn't get it"
 end
+

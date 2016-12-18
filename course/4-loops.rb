@@ -19,5 +19,5 @@ end
 
 ** Priklad: Vypiste seznam uzivatelu pocitace.
 
-# Hint:                                       
+# Hint:
 File.new('/etc/passwd').read
