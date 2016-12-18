@@ -1,5 +1,5 @@
-## *IRB
-#  (setq orgstruct-heading-prefix-regexp "##")
+* IRB
+#
 # $ irb
 #
 # vypis do STDOUT:
@@ -9,7 +9,7 @@ putc "sdlfjds"
 # nacteni z STDIN:
 a = gets
 
-## *Aritmetika
+# Aritmetika
 1+2 / 33
 2**8 == 256
 8 % 3 != 2
@@ -24,7 +24,6 @@ working_dir = `pwd`
 # do promenne working_dir ulozi vysledek
 
 ** Priklad: Pozdravte prihlaseneho uzivatele: "Hello Jakub!"
-
 
 * Promenne
 
