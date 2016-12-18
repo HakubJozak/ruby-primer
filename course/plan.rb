@@ -1,25 +1,37 @@
-# Ruby
+* Ruby
 #---------------------------------------
-
 # https://www.ruby-lang.org/en/
 # http://tryruby.org/levels/1/challenges/0
 # http://ruby-doc.org/docs/ruby-doc-bundle/Tutorial/
+#
+# ruby -v
+# ruby -I.
+# ruby -ractivesupport
 
-# Rubygems, IRB & PRY 
+* IRB
+#
+# Interactive RuBy.
+#
+puts "Hello World!"
+
+
+** Rubygems - balickovaci system
 #
 # gem install pry
+#
 a.methods
-a.respond_to?
+a.respond_to? :upcase
 
 
-## dynamicky_typovany
+** Dynamicky typovany jazyk
 a = 1
 a = 'hello!'
 a = 3 + (2 * 10)
 
-## objektove orientovany (Object, BasicObject)
+** Objektove orientovany (Object, BasicObject)
 BasicObject
 Object
+ 
 
 # - metody
 1.class
@@ -38,6 +50,12 @@ Object
 'hello world!'
 "hello #{name}!"
 %{ this is a very long story }
+?x == "x"
+ # ---
+ str.length
+ str.reverse
+ str.upcase
+ str.downcase
 
 ## Regexp
 /a-z+/
@@ -48,17 +66,23 @@ Object
 :red.to_s
 
 ## Array
-[ 1, 2, 'hello', Date.today ]
+a = [ 1, 2, 'hello', Date.today ]
 %w{ Jakub Tomas Alena }
+# ---
+a.each { |str| puts str.length }
+a.map { |str| str.upcase }
+a.map(&:upcase)
 
 
-## Hash 
+## Hash
 { :a => 1, :b => 2 }
 { a: 1, b: 2 }
 { Date.today => "Adam", Date.new(2016,6,20) => 'Jan' }
 
 
 # Idiomy
+#---------------------------------------
+# https://www.sitepoint.com/ruby-golf/
 
 a ||= (2**20).times.map { |x| x**3 / Math::sin(x) }
 

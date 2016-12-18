@@ -1,0 +1,18 @@
+* Intro
+** stuff
+*** other stuff
+**** other unimportant stuff
+
+Hello sir, my name is Jakub Hozak
+
+**** salkjdsf
+
+** slfdslkjf
+
+* Ruby
+
+is cool
+
+and interactive
+
+* Rubygems
