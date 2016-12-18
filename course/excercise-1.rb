@@ -7,3 +7,5 @@
   result = powers.join(', ')
   puts "#{i}: #{result}"
 end
+
+
