@@ -1,5 +1,5 @@
-* IRB
-#
+## *IRB
+#  (setq orgstruct-heading-prefix-regexp "##")
 # $ irb
 #
 # vypis do STDOUT:
@@ -9,7 +9,7 @@ putc "sdlfjds"
 # nacteni z STDIN:
 a = gets
 
-# Aritmetika
+## *Aritmetika
 1+2 / 33
 2**8 == 256
 8 % 3 != 2
