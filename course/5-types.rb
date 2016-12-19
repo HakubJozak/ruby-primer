@@ -50,9 +50,11 @@ a.map(&:upcase)
 class Dog
   def initialize(name)
     @name = name
+    @power = 2
   end
-  
+
   def bark!
+    puts 'HAF' * @power
   end
 
   def name
@@ -60,3 +62,9 @@ class Dog
   end
 end
 
+a = Dog.new('Alik')
+a.bark!
+
+{
+  
+}

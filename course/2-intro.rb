@@ -6,6 +6,9 @@
 puts "Hello World!"
 print "How are you?"
 putc "sdlfjds"
+
+
+
 # nacteni z STDIN:
 a = gets
 

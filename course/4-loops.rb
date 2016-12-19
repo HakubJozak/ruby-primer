@@ -6,6 +6,11 @@
   puts i
 end
 
+# co dela downto?
+5.downto(2) do |i|  puts i ; end
+
+# a downto?
+
 ** Pozpatku
 
 8.downto(3) { puts i }
@@ -13,11 +18,10 @@ end
 
 ** WHILE
 
-while a > 1
-  a += 3
-end
+a += 3 while a > 1
+  
 
 ** Priklad: Vypiste seznam uzivatelu pocitace.
 
 # Hint:
-File.new('/etc/passwd').read
+File.new('/etc/passwd').read.split(/\w*/)
