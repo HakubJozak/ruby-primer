@@ -4,10 +4,14 @@
 
 ** Vsechny vyrazy v Ruby 'maji hodnotu'!
 
-def hello_world
-  puts 'Hello!'
+def hello_world(name = 'World')
+  return unless name
+  puts "Hello #{name}!"
 end
 
+hello_world "John"
+hello_world nil
+hello_world
 
 ** parameter s defaultni hodnotou
 
@@ -17,14 +21,16 @@ end
 
 ** kazda metoda muze mit blok jako parametr
 
-def c(array = [])
-  if array.empty?
-    # zavolame
-    yield
-  else
-    array
+class Fixnum
+  def each_odd
+    if self % 2 == 1
+      yield
+    end
   end
 end
+
+
+
 
 ** explicitne - & znaci blok jako posledni parametr
 
@@ -36,8 +42,3 @@ def c(array = [ 1, 2, 3 ], &block)
     array.each(&block)
   end
 end
-
-
-
-
-
