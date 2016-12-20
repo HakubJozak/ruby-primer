@@ -33,11 +33,9 @@ end
 
 j = User.new 'JAKUB'
 j.say_your_name
-j.change_name 'Tonda'
 j.name = 'Tonda'
 
 # vypise 'Tonda'
-puts j.name
 j.say_your_name
 
 
