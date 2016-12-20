@@ -23,12 +23,8 @@ rescue => e
   puts e.message
 end
 
-** Rubygems - balickovaci system
-#
-# $ gem install pry
-#
-a.methods
-a.respond_to? :upcase
 
-* Debugovani
-binding.pry
+
+
+
+

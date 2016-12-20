@@ -13,13 +13,13 @@ end
 # create_user(login: 'jakub',
 #             password:'blalalalala')
 
+require 'securerandom'
+
 
 def create_user(login, options = {}) 
   @name = login
-
-  if options[:password]
-    @password = options[:password]
-  end
+  @password = options[:password] ||
+                SecureRandom.hex(40)
 end
 
 # create_user('jakub')

@@ -1,5 +1,7 @@
 # coding: utf-8
 class User
+  attr_reader :uid, :gid, :home_dir
+
   DICTIONARY = {
     'jakub' => 'kuba',
     'petr'  => 'peťa',
@@ -30,6 +32,7 @@ class User
   end
 
 
+
   def initialize(hash)
     @name = hash[:name]
     @home_dir = hash[:home]
@@ -39,10 +42,6 @@ class User
 
   def say_your_name
     puts "My name is #{@name}!"
-  end
-
-  def home_dir
-    @home_dir
   end
 
   def name

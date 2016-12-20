@@ -1,7 +1,6 @@
 # coding: utf-8
 require_relative 'user'
 
-require 'pry' ; binding.pry
 
 user = User.all['jakub']
 puts user.home_dir
