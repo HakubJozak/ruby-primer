@@ -11,4 +11,3 @@ def nesmysl
 end
 
 binding.pry
-

@@ -5,13 +5,21 @@
 'hello world!'
 "hello #{name}!"
 
-%{ this is a very long story }
+" dslfjdslkf lsdkjf ds \
+sdkfdskjfk jkldsfj \
+sldkjfdsf
+
+%{ "" '' this is a very long story }
+
+/http:\/\/www\.seznam\.cz/
+
+%r{http://www\.#{name}\.cz}
 
 ?x == "x"
 
 # ---
 str = 'Hello'
- 
+
 str.length
 str.reverse
 str.upcase
@@ -67,7 +75,6 @@ a.concat [ 'another array' ]
 { a: 1, b: 2 }
 { Date.today => "Adam", Date.new(2016,6,20) => 'Jan' }
 
-
 *** Třídy
 
 class Dog
@@ -89,5 +96,5 @@ a = Dog.new('Alik')
 a.bark!
 
 {
-  
+
 }

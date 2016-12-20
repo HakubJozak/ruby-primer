@@ -13,7 +13,7 @@ $users = {}
 
 # records.select! { |h| h[:uid] > 999 }
 
-               
+
 records.each do |record|
   if h[:uid] > 999
     name = record[:name]
