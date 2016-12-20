@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 # coding: utf-8
 require_relative 'user'
 
@@ -5,7 +6,6 @@ require_relative 'user'
 user = User.all[ARGV.first]
 puts user.home_dir
 
-# 
 
 
 

@@ -25,10 +25,12 @@ class User
       }
 
       name = one_line_hash[:name]
-      result[name] = User.new(one_line_hash)
+      new_user = User.new(one_line_hash)
+
+      result[name] = new_user
     end
 
-    return result
+    result
   end
 
 

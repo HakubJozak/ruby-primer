@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'mechanize'
 
+<a href="a/7z1604.msi">Download</a>
 def kontakt_na_web(uri)
   crawler = Mechanize.new
 
