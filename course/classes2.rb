@@ -1,7 +1,15 @@
 # coding: utf-8
 class User
+  DICTIONARY = {
+    'jakub' => 'kuba',
+    'petr'  => 'peťa',
+    'ladislav' => 'laďa',
+    'antonín' => 'tonda',
+    'františek' => 'franta'
+  }
+
   def initialize(name)
-    @name = name.downcase.capitalize
+    @name = name.downcase
   end
 
   def say_your_name
@@ -9,12 +17,12 @@ class User
   end
 
   def name
-    @name
+    @name.capitalize
   end
 
   # Pouziti: j.name= 'Neco noveho'
   def name=(new_name)
-    @name = new_name.downcase.capitalize
+    @name = new_name.downcase
   end
   
   # jakub -> kuba
@@ -23,20 +31,26 @@ class User
   # antonín -> tonda
   # františek -> franta
   def nickname
+    if DICTIONARY[@name]
+      DICTIONARY[@name].capitalize
+    else
+      @name.capitalize
+    end
   end
 end
 
 
 
-
-
-
 j = User.new 'JAKUB'
-j.say_your_name
-j.name = 'Tonda'
+puts j.nickname
 
-# vypise 'Tonda'
-j.say_your_name
+
+j = User.new 'AntoNín'
+puts j.nickname
+
+j = User.new 'Milan'
+puts j.nickname
+
 
 
 
