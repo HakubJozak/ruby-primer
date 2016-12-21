@@ -1,4 +1,10 @@
+#!/usr/bin/env ruby
+
 require_relative 'downloader'
 
-d = Downloader.new('http://www.7-zip.org')
-d.download!
+begin
+  d = Downloader.new(ARGV.first)
+  d.download!
+rescue Downloader::Error
+  puts $!.message
+end

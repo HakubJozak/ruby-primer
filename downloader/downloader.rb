@@ -4,8 +4,12 @@ require 'fileutils'
 require_relative 'link_tools'
 
 
+
+
 class Downloader
   include LinkTools
+
+  class Error < Exception ; end
 
   def initialize(base_url)
     @base_url = base_url
@@ -13,6 +17,10 @@ class Downloader
     @locale = 'en'
     @arch = 'x64'
     @extension = 'msi'
+
+    if @base_url.nil? || @base_url.empty?
+      fail DownloaderError.new('Base URL missing')
+    end
   end
 
   def package_url
