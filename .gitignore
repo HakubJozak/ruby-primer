@@ -2,4 +2,5 @@
 /httpd/
 /chef/
 /marp/
-/downloader/sw_firefox/
+/downloader/sw_*
+
