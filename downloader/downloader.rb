@@ -13,19 +13,10 @@ class Downloader
 
   def initialize(base_url)
     @base_url = base_url
-    @name = '7zip'
-    @locale = 'en'
-    @arch = 'x64'
-    @extension = 'msi'
 
     if @base_url.nil? || @base_url.empty?
       fail DownloaderError.new('Base URL missing')
     end
-  end
-
-  def package_url
-    uri = find_link_with /(.+-x64\.exe)/
-    [ @base_url, uri.href.sub(/exe$/, @extension) ].join '/'
   end
 
   def base_url
@@ -43,20 +34,33 @@ class Downloader
       puts 'Package already exists.'
     else
       FileUtils.mkdir_p(dirname)
-      system "wget #{package_url} -O #{path}"
+      system "wget '#{package_url}' -O #{path}"
     end
-  end
-
-  def version
-    package_url =~ /7z(\d{4})/
-    $1
   end
 
   private
 
+  def find_link_with(regexp)
+    crawler = Mechanize.new
+    page = crawler.get(base_url)
+
+    uri = page.links.find do |url|
+      url.href =~ regexp
+    end    
+  end  
+
   def dirname
     folder = [ 'sw_', @name ].join
-    [ folder, version ].join('/')
+    [ folder, version.gsub('.','') ].join('/')
   end
-
 end
+
+require_relative 'seven_zip_downloader'
+require_relative 'firefox_downloader'
+
+
+if $0 == __FILE__
+  # SevenZipDownloader.new.download!
+  FirefoxDownloader.new.download!
+end
+
