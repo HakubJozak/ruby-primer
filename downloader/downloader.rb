@@ -1,9 +1,12 @@
 require 'rubygems'
 require 'mechanize'
 require 'fileutils'
+require_relative 'link_tools'
 
 
 class Downloader
+  include LinkTools
+
   def initialize(base_url)
     @base_url = base_url
     @name = '7zip'
@@ -13,19 +16,12 @@ class Downloader
   end
 
   def package_url
-    crawler = Mechanize.new
-    page = crawler.get(@base_url)
-
-    uri = page.links.find do |url|
-      url.href =~ /(.+-x64\.exe)/
-    end
-
+    uri = find_link_with /(.+-x64\.exe)/
     [ @base_url, uri.href.sub(/exe$/, @extension) ].join '/'
   end
 
-  def dirname
-    folder = [ 'sw_', @name ].join
-    [ folder, version ].join('/')
+  def base_url
+    @base_url
   end
 
   def path
@@ -47,6 +43,12 @@ class Downloader
     package_url =~ /7z(\d{4})/
     $1
   end
+
+  private
+
+  def dirname
+    folder = [ 'sw_', @name ].join
+    [ folder, version ].join('/')
+  end
+
 end
-
-
